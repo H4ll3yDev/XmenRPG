@@ -12,6 +12,5 @@ public class Main {
         Personaje pj4 = new Personaje("Magneto",180, 90, 45, "Control del metal");
         Personaje pj5 = new Personaje("Mystica", 1300, 70, 30, "Cambia formas");
 
-   
     }
 }
