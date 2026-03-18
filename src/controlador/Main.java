@@ -1,7 +1,6 @@
 package controlador;
 
-
-import modelo.Personaje;
+import modelo.*;
 
 public class Main {
 
