@@ -1,4 +1,4 @@
-package modelo;
+package modelo.sistema;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class Inventario {
 
     private int totalProductos;
     private int capacidadMaxima;
-    private ArrayList<String> categorias;
+    private ArrayList<Inventario> categorias;
     
 
     //Constructor
@@ -14,8 +14,6 @@ public class Inventario {
         
     this.totalProductos = totalProductos;
     this.capacidadMaxima = capacidadMaxima;
-        
-        System.out.println("BLYATTTTTTTTT");
 
     }
 
@@ -40,12 +38,12 @@ public class Inventario {
     }
 
 
-    public ArrayList<String> getCategorias() {
+    public ArrayList<Inventario> getCategorias() {
         return categorias;
     }
 
 
-    public void setCategorias(ArrayList<String> categorias) {
+    public void setCategorias(ArrayList<Inventario> categorias) {
         this.categorias = categorias;
     }
 
