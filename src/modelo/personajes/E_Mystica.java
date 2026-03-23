@@ -1,5 +1,5 @@
 package modelo.personajes;
 
-public class Vision {
+public class E_Mystica {
     
 }

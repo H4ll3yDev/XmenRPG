@@ -4,48 +4,55 @@ import java.util.ArrayList;
 
 public class Inventario {
 
-    private int totalProductos;
     private int capacidadMaxima;
-    private ArrayList<Inventario> categorias;
-    
+    private ArrayList<Objeto> objetos;
 
-    //Constructor
-    public Inventario (int totalProductos, int capacidadMaxima) {
-        
-    this.totalProductos = totalProductos;
-    this.capacidadMaxima = capacidadMaxima;
-
-    }
-
-
-    public int getTotalProductos() {
-        return totalProductos;
-    }
-
-
-    public void setTotalProductos(int totalProductos) {
-        this.totalProductos = totalProductos;
-    }
-
-
-    public int getCapacidadMaxima() {
-        return capacidadMaxima;
-    }
-
-
-    public void setCapacidadMaxima(int capacidadMaxima) {
+    public Inventario(int capacidadMaxima) {
         this.capacidadMaxima = capacidadMaxima;
+        this.objetos = new ArrayList<>();
     }
 
-
-    public ArrayList<Inventario> getCategorias() {
-        return categorias;
+    // añadir objeto
+    public void agregarObjeto(Objeto obj) {
+        if (objetos.size() < capacidadMaxima) {
+            objetos.add(obj);
+            System.out.println(obj.getNombre() + " añadido al inventario.");
+        } else {
+            System.out.println("Inventario lleno.");
+        }
     }
 
+    // usar objeto
+    public void usarObjeto(Objeto obj, Personaje usuario) {
 
-    public void setCategorias(ArrayList<Inventario> categorias) {
-        this.categorias = categorias;
+        switch (obj.getTipo().toLowerCase()) {
+
+            case "cura":
+                usuario.setVida(usuario.getVida() + obj.getValor());
+                System.out.println(usuario.getNombre() + " se cura " + obj.getValor());
+                break;
+
+            case "ataque":
+                usuario.setAtaque(usuario.getAtaque() + obj.getValor());
+                System.out.println(usuario.getNombre() + " aumenta ataque en " + obj.getValor());
+                break;
+
+            case "revivir":
+                if (!usuario.estaVivo()) {
+                    usuario.setVida(obj.getValor());
+                    System.out.println(usuario.getNombre() + " ha sido revivido!");
+                }
+                break;
+
+            default:
+                System.out.println("Objeto no válido");
+        }
+
+        objetos.remove(obj); // se consume
     }
 
-
+    // GETTERS
+    public ArrayList<Objeto> getObjetos() {
+        return objetos;
+    }
 }

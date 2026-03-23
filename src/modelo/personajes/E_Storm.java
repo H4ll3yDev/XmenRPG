@@ -1,5 +1,5 @@
 package modelo.personajes;
 
-public class Centinel {
+public class E_Storm {
     
 }

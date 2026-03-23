@@ -1,7 +1,6 @@
 package modelo.personajes;
 
-public class Ultron {
+public class E_Phoenix {
 
-   
-
+    
 }

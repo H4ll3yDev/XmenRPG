@@ -1,5 +1,5 @@
 package modelo.personajes;
 
-public class Xavier {
+public class E_Centinel {
     
 }
