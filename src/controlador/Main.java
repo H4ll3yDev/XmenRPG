@@ -1,16 +1,21 @@
 package controlador;
 
-import modelo.*;
+import modelo.personajes.*;
+import modelo.sistema.*;
+
 
 public class Main {
-
     public static void main(String[] args) {
+        A_Lobezno lobezno = new A_Lobezno();
+        E_Magneto magneto = new E_Magneto();
+        Combate combate = new Combate(lobezno, magneto);
 
-        Personaje pj1 = new Personaje();
-        Personaje pj2 = new Personaje("Wolverine", 200, 80, 30, "Garras de adamantium");
-        Personaje pj3 = new Personaje("Ciclope", 110, 30, 25, "Rayo laser");
-        Personaje pj4 = new Personaje("Magneto",180, 90, 45, "Control del metal");
-        Personaje pj5 = new Personaje("Mystica", 1300, 70, 30, "Cambia formas");
+        combate.iniciarCombate();
+
+        
+        System.out.println(lobezno);
+        System.err.println("\n");
+        System.out.println(magneto);
 
     }
 }

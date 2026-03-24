@@ -1,4 +1,4 @@
-package modelo;
+package modelo.sistema;
 
 public class Cerebro {
     
