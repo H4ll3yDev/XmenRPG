@@ -15,7 +15,7 @@ public class E_Magneto extends Enemigo {
                 30,
                 "Dominio magnético",
                 180);
-
+        
         this.campoMagnetico = 20;
     }
 

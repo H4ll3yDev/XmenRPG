@@ -11,7 +11,6 @@ public class Main {
         Combate combate = new Combate(lobezno, magneto);
 
         combate.iniciarCombate();
-
         
         System.out.println(lobezno);
         System.err.println("\n");

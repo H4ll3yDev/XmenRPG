@@ -10,7 +10,7 @@ import modelo.sistema.Personaje;
         super(nombre, vida, poderes, ataque, defensa, habilidad, vidaMaxima);
         this.leerMentes = leerMentes;
     }
-    
+  
     
         
     }

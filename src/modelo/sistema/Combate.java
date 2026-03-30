@@ -45,16 +45,16 @@ public class Combate {
     private void mostrarEstado() {
 
         System.out.println("\n==============================");
-        System.out.println("JUGADOR:");
+        System.out.println("Usuario:");
         System.out.println(jugador);
-        System.out.println("\nENEMIGO:");
+        System.out.println("\nEnemigo:");
         System.out.println(enemigo);
         System.out.println("\n");
     }
 
     private void turnoJugador() {
 
-        System.out.println("TU TURNO:");
+        System.out.println("Tu turno:");
 
         if (!jugador.puedeActuar()) {
             System.out.println(jugador.getNombre() + " está inmovilizado y no puede actuar");
@@ -135,7 +135,7 @@ public class Combate {
         int cura = 30;
         jugador.setVida(jugador.getVida() + cura);
 
-        System.out.println("🧪 Usas una poción y recuperas " + cura + " de vida");
+        System.out.println("Usas una poción y recuperas " + cura + " de vida");
     }
 
     private boolean intentarHuir() {
