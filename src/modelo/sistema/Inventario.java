@@ -11,7 +11,7 @@ public class Inventario {
         this.capacidadMaxima = capacidadMaxima;
         this.objetos = new ArrayList<>();
     }
-
+    
     // añadir objeto
     public void agregarObjeto(Objeto obj) {
         if (objetos.size() < capacidadMaxima) {
@@ -50,7 +50,7 @@ public class Inventario {
 
         objetos.remove(obj); // se consume
     }
-
+    
     // GETTERS
     public ArrayList<Objeto> getObjetos() {
         return objetos;

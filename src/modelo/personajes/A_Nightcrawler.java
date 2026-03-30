@@ -11,5 +11,4 @@ import modelo.sistema.Personaje;
         this.teleport = teleport;
     }
     
-
 }
